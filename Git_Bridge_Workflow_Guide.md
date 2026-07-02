@@ -137,7 +137,9 @@ print("✓ Model loaded successfully!")
 # 4. Polling Loop
 print("👀 Listening for requests from local PC...")
 while True:
-    run_git(["pull", "origin", "main"])
+    # Clean state fetch + reset to avoid branch divergence on the Kaggle worker
+    run_git(["fetch", "origin", "main"])
+    run_git(["reset", "--hard", "origin/main"])
     
     status_path = os.path.join(PROJECT_DIR, "git_rpc_status.txt")
     request_path = os.path.join(PROJECT_DIR, "git_rpc_request.json")
@@ -213,7 +215,7 @@ while True:
                 if not os.path.exists(constraints_path):
                     run_git(["rm", "git_rpc_constraints.npz"])
                 run_git(["commit", "-m", "RPC: Motion generation complete"])
-                run_git(["push", "origin", "main"])
+                run_git(["push", "-f", "origin", "main"])
                 print("[RPC] Response sent successfully!")
                 
             except Exception as e:
@@ -222,7 +224,7 @@ while True:
                     f.write("error")
                 run_git(["add", "git_rpc_status.txt"])
                 run_git(["commit", "-m", "RPC: Generation error"])
-                run_git(["push", "origin", "main"])
+                run_git(["push", "-f", "origin", "main"])
                 
     time.sleep(5)
 ```
