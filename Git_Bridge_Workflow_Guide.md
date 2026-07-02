@@ -58,8 +58,9 @@ This script runs on Kaggle. It loads the Kimodo model **once** in VRAM, then pol
 ### Kaggle Notebook Script:
 
 ```python
-# 1. Force PyTorch to use 'file_system' sharing strategy immediately to bypass Kaggle sandbox limits
+# 1. Force PyTorch to use single-GPU mode and 'file_system' sharing strategy immediately to bypass Kaggle sandbox limits
 import torch
+torch.cuda.device_count = lambda: 1
 torch.multiprocessing.set_sharing_strategy('file_system')
 
 import os
