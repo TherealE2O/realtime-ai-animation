@@ -181,7 +181,7 @@ while True:
                     pred_joints_output = model(
                         req["prompts"],
                         req["num_frames"],
-                        diffusion_steps=50,
+                        num_denoising_steps=50,
                         multi_prompt=True,
                         constraint_lst=model_constraints,
                         cfg_weight=[2.0, 2.0],
