@@ -1,10 +1,11 @@
 {
   "prompts": [
-    "push up."
+    "doing push up."
   ],
   "num_frames": [
     180
   ],
+  "num_samples": 1,
   "seed": 42,
-  "timestamp": 1782974233.060906
+  "timestamp": 1782974411.1468525
 }
