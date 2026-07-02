@@ -77,9 +77,9 @@ except Exception:
     print("Warning: Add HF_TOKEN and GH_TOKEN to Kaggle Secrets.")
 
 # --- CONFIGURE YOUR GIT DETAILS HERE ---
-GH_USER = "your_github_username"
-GH_EMAIL = "your_email@example.com"
-GH_REPO = "github.com/your_username/your_repo"
+GH_USER = "TherealE2O"
+GH_EMAIL = "osasodiasea1@gmail.com"
+GH_REPO = "github.com/TherealE2O/realtime-ai-animation"
 PROJECT_DIR = "/kaggle/working/my_project"
 
 # Ensure repo is cloned
@@ -163,13 +163,16 @@ while True:
                 
                 print(f"[RPC] Generating motion for prompt: {req['prompts']}")
                 
-                # Load constraints list
-                from kimodo.exports.constraints import load_constraints_lst
-                model_constraints = load_constraints_lst(constraints_path, skeleton=model.skeleton)
-                
-                # Enforce GPU constraints
-                for constraint in model_constraints:
-                    constraint.to("cuda:0")
+                # Load constraints list (robust fallback for prompt-only generation)
+                model_constraints = []
+                if os.path.exists(constraints_path):
+                    from kimodo.constraints import load_constraints_lst
+                    try:
+                        model_constraints = load_constraints_lst(constraints_path, skeleton=model.skeleton)
+                        for constraint in model_constraints:
+                            constraint.to("cuda:0")
+                    except Exception as e:
+                        print(f"No valid constraints loaded: {e}")
                 
                 # Run Generation
                 with torch.no_grad():
@@ -196,12 +199,19 @@ while True:
                     
                 np.savez_compressed(response_path, **response_data)
                 
+                # Clean up constraints file to prevent reuse in prompt-only runs
+                if os.path.exists(constraints_path):
+                    os.remove(constraints_path)
+                
                 # Mark as done
                 with open(status_path, "w") as f:
                     f.write("done")
                 
                 print("[RPC] Commit and push response back to GitHub...")
                 run_git(["add", "git_rpc_response.npz", "git_rpc_status.txt"])
+                # Also stage removal of constraints file
+                if not os.path.exists(constraints_path):
+                    run_git(["rm", "git_rpc_constraints.npz"])
                 run_git(["commit", "-m", "RPC: Motion generation complete"])
                 run_git(["push", "origin", "main"])
                 print("[RPC] Response sent successfully!")
