@@ -1,0 +1,20 @@
+# Ignore large mocap images and raw data
+mocap/
+
+# Ignore Blender files (large binaries)
+*.blend
+*.blend1
+*.fbx
+*.glb
+
+# Ignore images
+*.jpeg
+*.jpg
+*.png
+
+# Ignore local batch cache output folders (since Kaggle generates these and we pull them)
+kaggle/
+secondbatch/
+3batch/
+4batch/
+5batch/

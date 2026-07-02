@@ -1,0 +1,215 @@
+{
+  "main": {
+    "id": "49e1a4cc0c831fd7",
+    "type": "split",
+    "children": [
+      {
+        "id": "fa7f7b64f31682d6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b179dea908053d88",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "chapter 1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "chapter 1"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4426fae2f48e0fe9",
+    "type": "split",
+    "children": [
+      {
+        "id": "633757a55cca0ea3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "862aceee9ebae864",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "ec3730d7932924de",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "e4d68e8786d8d615",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "ef21c3d69ae9dc6d",
+    "type": "split",
+    "children": [
+      {
+        "id": "99bd37c5a599a06e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3d24e5b79c964fe2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Scene 1 - Hokages Office.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Scene 1 - Hokages Office"
+            }
+          },
+          {
+            "id": "18cdeda0d04fe54d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Scene 1 - Hokages Office.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Scene 1 - Hokages Office"
+            }
+          },
+          {
+            "id": "90a888e6e500b3d5",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "4dd2ac76563b6fd1",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "c28ca7ceb75b26fd",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Scene 1 - Hokages Office.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Scene 1 - Hokages Office"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "b179dea908053d88",
+  "lastOpenFiles": [
+    "mocap/000000.jpg",
+    "mocap/0000063.jpg",
+    "chapter 1.md",
+    "KuroshiHyuga.webp",
+    "shikamaru.jpeg",
+    "kiba.jpeg",
+    "denki.jpeg",
+    "iwabe.jpg",
+    "denki_tpose.png",
+    "Scene 1 - Hokages Office.md",
+    "scene_3_blockout.blend1",
+    "scene_3_blockout.blend@",
+    "scene_2_blockout.blend@",
+    "scene_2_blockout.blend1",
+    "scene_1_blockout.blend@",
+    "scene_1_blockout.blend1",
+    "scene_5_blockout.blend1",
+    "scene_5_blockout.blend@",
+    "scene_5_blockout.blend",
+    "scene_4_blockout.blend",
+    "Scene 2 - Kibas House Recruitment.md",
+    "Scene 5 - The River Encounter and Sparring.md",
+    "Scene 4 - Team Assembles at Gate.md",
+    "Scene 3 - Kiba and Lizzy Argument.md",
+    "Welcome.md"
+  ]
+}
