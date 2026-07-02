@@ -58,11 +58,14 @@ This script runs on Kaggle. It loads the Kimodo model **once** in VRAM, then pol
 ### Kaggle Notebook Script:
 
 ```python
+# 1. Force PyTorch to use 'file_system' sharing strategy immediately to bypass Kaggle sandbox limits
+import torch
+torch.multiprocessing.set_sharing_strategy('file_system')
+
 import os
 import sys
 import json
 import time
-import torch
 import numpy as np
 from unittest.mock import patch
 from kaggle_secrets import UserSecretsClient
